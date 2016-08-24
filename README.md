@@ -1,6 +1,6 @@
 # Alfred Chrome Passwords
 
-Browse your passwords saved in Google Chrome using Alfred instead of https://password.google.com.
+Browse your passwords saved in Google Chrome using Alfred instead of https://passwords.google.com.
 
 # Demo
 
