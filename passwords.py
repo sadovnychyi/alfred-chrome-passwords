@@ -43,7 +43,8 @@ def main(query, profile):
         'autocomplete': title,
       })
   passwords = fuzzywuzzy.process.extractBests(
-    query, passwords, processor=lambda x: '%s %s' % (x['title'], x['subtitle']))
+    query, passwords, processor=lambda x: '%s %s' % (
+      x['title'], x['subtitle']) if isinstance(x, dict) else x)
   json.dump({'items': [p[0] for p in passwords]}, sys.stdout, indent=2)
   sys.stdout.flush()
 
